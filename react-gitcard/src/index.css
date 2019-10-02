@@ -47,6 +47,7 @@ h2, h3, h4, h5 {
   background-image: linear-gradient(to bottom, white, #fce7e7);
   display: flex;
   width: 80%;
+  max-width: 850px;
   max-height: 210px;
   margin: 30px auto;
   background-color: #f8f8f8;

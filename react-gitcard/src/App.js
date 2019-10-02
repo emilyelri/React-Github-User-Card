@@ -16,10 +16,8 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    console.log("App cDM starting.");
-
-    axios.get(`https://api.github.com/users/${this.state.user}`)
+  accessGithub = user => {
+    axios.get(`https://api.github.com/users/${user}`)
     .then(response => {
       this.setState({ 
       users: [...this.state.users,  response.data]
@@ -27,7 +25,7 @@ class App extends React.Component {
     .catch(error => {
       console.log("Error fetching user.", error)})
 
-      axios.get(`https://api.github.com/users/${this.state.user}/followers`)
+      axios.get(`https://api.github.com/users/${user}/followers`)
       .then(response => {
         console.log("FETCHING FOLLOWERS", response)
         this.setState({next: response.headers.link});
@@ -45,13 +43,29 @@ class App extends React.Component {
       console.log(this.state.users)
   }
 
+  //lifecycle and form methods
+
+  componentDidMount() {
+    console.log("App cDM starting.");
+    this.accessGithub(this.state.user);
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.state.user !== prevState.user){
+      this.accessGithub(this.state.user);
+    }
+  }
+
   handleChange = (e) => {
     console.log("user input:", e.target.value);
     this.setState({input: e.target.value});
   }
 
   handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({users: []});
     this.setState({user: this.state.input})
+    e.target.value = '';
   }
 
   render() { 
