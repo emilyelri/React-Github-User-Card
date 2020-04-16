@@ -1,0 +1,115 @@
+body {
+  background: url(./images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+img {
+  border-radius: 10px;
+  height: 100%;
+}
+
+h1 {
+  color: black;
+  margin: 30px;
+  text-align: center;
+}
+
+h2, h3, h4, h5 {
+  margin: 5 10px;
+  padding: 0;
+}
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0px;
+}
+.login {
+  margin: 10px;
+  font-style: italic;
+}
+
+.card {
+  background-image: linear-gradient(to bottom, white, #fce7e7);
+  display: flex;
+  width: 80%;
+  max-width: 850px;
+  max-height: 210px;
+  margin: 30px auto;
+  background-color: #f8f8f8;
+  border: 2px dotted lightcoral;
+  border-radius: 10px;
+  box-shadow: 5px 10px #d3ceb2;
+}
+
+img {
+  width: 200px;
+  margin: 5px 30px 5px 5px;
+}
+
+.user-info {
+  margin: 20px;
+  width: 40%;
+}
+
+.user-stats {
+  margin: 20px;
+  width: 30%;
+}
+
+.gh-btn {
+  background-color: white;
+  padding: 3px 4px;
+  border: 1px solid black;
+  border-radius: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.gh-btn:hover {
+  background-color: black;
+}
+
+.gh {
+  width: 20px;
+  margin: 0px auto -1px;
+}
+
+.pagination {
+  text-align: center;
+  margin: auto;
+}
+
+.pag-btn {
+  background-color: white;
+  width: 10%;
+  margin: 20px 10px;
+  padding: 5px 0;
+  border: 2px solid lightcoral;
+  border-radius: 10px;
+  box-shadow: 3px 5px #d3ceb2;
+  transition: all .3s ease-in-out;
+}
+
+.pag-btn:hover {
+  background-color: #fceaea;
+  transform: scale(1.05);
+}
+
+.form {
+  text-align: center;
+  margin: auto;
+}
